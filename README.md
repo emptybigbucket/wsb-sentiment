@@ -14,7 +14,7 @@ Before you can run this project, you'll need to have the following installed:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/wsb-sentiment-analysis.git
+   git clone https://github.com/emptybigbucket/wsb-sentiment-analysis.git
    cd wsb-sentiment-analysis
    ```
 
