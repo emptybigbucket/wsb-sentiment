@@ -1,6 +1,6 @@
 # WallStreetBets Sentiment Analysis
 
-This project performs sentiment analysis on the latest 100 posts from the WallStreetBets subreddit, covering posts from 9 AM yesterday to 9 AM today. The analysis runs automatically at 9 AM, Monday through Friday, using GPT-4-Turbo to evaluate sentiments expressed in the subreddit. The results are then tweeted. This tool is designed to aid in understanding sentiment trends but is not a substitute for professional investment advice.
+This project performs sentiment analysis on the latest 100 posts from the WallStreetBets subreddit, covering posts from 9 AM yesterday to 9 AM today. The analysis runs automatically at 9 AM, Monday through Friday, using GPT-4o to evaluate sentiments expressed in the subreddit. The results are then tweeted. This tool is designed to aid in understanding sentiment trends but is not a substitute for professional investment advice.
 
 ## Getting Started
 
