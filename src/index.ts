@@ -98,7 +98,6 @@ const analyzeGroupedPosts = async (posts: { selftext: string }[]) => {
 
 const parseAndTweetSentimentResults = (results: string) => {
   try {
-    console.log(results);
     const tickerSentimentPairs = JSON.parse(results) as string[];
     postTweet(createTwitterPost(tickerSentimentPairs));
   } catch (err) {
