@@ -73,7 +73,7 @@ const analyzeGroupedPosts = async (posts: { selftext: string }[]) => {
   Identify ALL of the stock tickers mentioned in the following Reddit posts and rate the sentiment for each from -10 (very negative) to +10 (very positive). for investing into today.
   The reddit posts are separated by "Reddit Post (number)". 
   Make sure to ONLY return the ticker followed by the analysis, separated by a ":" as strings organized in one array and NO OTHER TEXT. Add a $ sign before every ticker.
-  If there are no stocks mentioned, return an empty array.
+  If there are no stocks mentioned, return an empty array. An example response would look like: ["$AAPL:10", "$GOOGL:10"].
 
 
   Posts: 
@@ -82,7 +82,7 @@ const analyzeGroupedPosts = async (posts: { selftext: string }[]) => {
 
   try {
     const response = await openAiInstance.chat.completions.create({
-      model: "gpt-4-turbo",
+      model: "gpt-4o",
       messages: [{ role: "user", content: prompt }],
       max_tokens: 1000,
       temperature: 0.2,
@@ -98,6 +98,7 @@ const analyzeGroupedPosts = async (posts: { selftext: string }[]) => {
 
 const parseAndTweetSentimentResults = (results: string) => {
   try {
+    console.log(results);
     const tickerSentimentPairs = JSON.parse(results) as string[];
     postTweet(createTwitterPost(tickerSentimentPairs));
   } catch (err) {
